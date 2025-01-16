@@ -70,4 +70,8 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+    protected function registered($request, $user)
+    {
+        return redirect()->route('profile.edit');
+    }
 }
