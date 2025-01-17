@@ -19,6 +19,7 @@ class ProfileController extends Controller
     public function update(Request $request)
     {
         $request->validate([
+            'name' => 'required', // Adicione as validações necessárias
             'essential_data' => 'required', // Adicione as validações necessárias
         ]);
 

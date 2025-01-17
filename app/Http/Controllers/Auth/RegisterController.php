@@ -72,6 +72,9 @@ class RegisterController extends Controller
     }
     protected function registered($request, $user)
     {
+        if (is_null($user->essential_data)) {
+            return redirect()->route('profile.edit');
+        }
         return redirect()->route('profile.edit');
     }
 }

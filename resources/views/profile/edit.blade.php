@@ -18,6 +18,9 @@
                         @csrf
 
                         <div class="form-group">
+                            <label for="name">{{ __('Nome') }}</label>
+                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autofocus>
+                            
                             <label for="essential_data">{{ __('Dados Essenciais') }}</label>
                             <input id="essential_data" type="text" class="form-control @error('essential_data') is-invalid @enderror" name="essential_data" value="{{ old('essential_data') }}" required autofocus>
 
